@@ -1,65 +1,65 @@
-<?php 
-// Add a custom action hook when the form is submitted successfully
-add_action('wpcf7_before_send_mail', 'custom_process_form_submission');
+<?php
+function custom_contact_form_submission($contact_form) {
+    $submission = WPCF7_Submission::get_instance();
 
-function custom_process_form_submission($contact_form) {
-    // Get the form ID
-    $form_id = $contact_form->id();
-    // wp_die("TEST", 'API Request Error', array('response' => 400));
-    // add_filter('wpcf7_display_message', function ($message, $status, $id) {
-    //                 return 'csdcdscds';
-    //             }, 10, 3);
-    // Check if this is the form you want to intercept (replace 123 with your form ID)
-    // if ($form_id == 5) {
-        // Get form data
-        $submission = WPCF7_Submission::get_instance();
+    if ($submission) {
+        $data = $submission->get_posted_data();
+        if ($contact_form->id() == 161) {
+            $email = sanitize_email($data['email']);
+            $name = sanitize_text_field($data['your-name']);
+            $message = sanitize_textarea_field($data['message']);
+            $subscribe = isset($data['news']) ? true : false;
 
-        if ($submission) {
-
-            // Get form data as an array
-            $form_data = $submission->get_posted_data();
-
-            // Prepare the data for the API request (adjust this according to your needs)
-            $api_data = array(
-
-                // 'name' => isset($form_data['your-name']) ? $form_data['your-name'] : '',
-                'email' => isset($form_data['your-email']) ? $form_data['your-email'] : '',
-                'content' => isset($form_data['your-message']) ? json_encode($form_data['your-message']) : '',
-                'type_of_request' => 'c',
+            $content = array(
+                'name' => $name,
+                'message' => $message,
+                'subscribe' => $subscribe,
             );
-
-            // Convert $api_data to JSON format
-            // $api_data_json = json_encode($api_data);
-
-            $api_url = 'https://api.questatlas.world/common/requests';
-
-            // Send the API request using wp_remote_post()
-            $response = wp_remote_post($api_url, array(
-                'method' => 'POST',
-                'body' => $api_data, // Send the JSON data
-                'cookies' => array()
-            ));
-
-            error_log('API Request Error: ' . $response);
-
-            // if (is_wp_error($response)) {
-            //     // Handle the error if the API request failed
-            //     error_log('API Request Error: ' . $response->get_error_message());
-            // } else {
-            //     // The API request was successful, and you can access the response data
-            //     $response_code = wp_remote_retrieve_response_code($response);
-            //     $response_message = wp_remote_retrieve_response_message($response);
-            //     $response_body = wp_remote_retrieve_body($response);
-
-            //     // Uncomment the following lines for debugging purposes
-            //     error_log('API Response Code: ' . $response_code);
-            //     error_log('API Response Message: ' . $response_message);
-            //     error_log('API Response Body: ' . $response_body);
-            // }
+            $type = 'c';
+        } elseif($contact_form->id() == 5) {
+            $email = sanitize_email($data['your-email']);
+            $os_system = isset($data['os_system']) ? sanitize_text_field($data['os_system'][0]) : '';
+            $content = array(
+                'os_system' => $os_system
+            );
+            $type = 't';
+        } elseif($contact_form->id() == 162) {
+            $email = sanitize_email($data['email']);
+            $name = sanitize_text_field($data['your-name']);
+            $surname = sanitize_text_field($data['your-surname']);
+            $organization = sanitize_text_field($data['organization']);
+            $phone = $data['phone'];
+            $message = sanitize_textarea_field($data['message']);
 
 
-            return false;
+
+            $content = array(
+                'name' => $name,
+                'surname' => $surname,
+                'organization' => $organization,
+                'phone' => $phone,
+                'message' => $message,
+            );
+            $type = 'p';
         }
-    // }
+
+        $request_body = array(
+            'email' => $email,
+            'content' => json_encode($content),
+            'type_of_request' => $type
+        );
+
+        $request_args = array(
+            'method' => 'POST',
+            'body' => $request_body,
+
+        );
+
+        $endpoint = get_field('api_endpint_url', 'options');
+        $response = wp_remote_post($endpoint, $request_args);
+        // Optionally, you can check the response for success or handle errors here
+
+    }
 }
+add_action('wpcf7_before_send_mail', 'custom_contact_form_submission');
 ?>

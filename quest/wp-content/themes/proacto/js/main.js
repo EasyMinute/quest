@@ -54,6 +54,11 @@ jQuery(function($){
 			$('#apply-form').find("input[value='Android']").prop("checked", true);
 		});
 
+		$('.submit-modal').on('click', function(){
+			console.log('a');
+			$(this).parents('.modal__wrap').find('form').trigger('submit');
+		});
+
 	});
 
 });

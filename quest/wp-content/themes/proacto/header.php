@@ -26,7 +26,6 @@ $general = get_field('general', 'options');
 $footer = get_field('footer', 'options'); 
 ?>
 
-
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
