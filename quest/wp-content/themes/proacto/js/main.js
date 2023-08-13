@@ -5,6 +5,11 @@ jQuery(function($){
 		$("#header__burger").on('click', function(){
 			$(this).toggleClass('active');
 			$('#header__nav').toggleClass('opened');
+			if($(this).hasClass('active')) {
+				$('body').addClass('unscroll');
+			} else {
+				$('body').removeClass('unscroll');
+			}
 		});
 
 		$(".accordeons__item").on('click', function(){
@@ -25,13 +30,17 @@ jQuery(function($){
 		});
 
 		$('.modal__head .close, .cancel-modal').on('click', function(){
-			$('body').removeClass('unscroll');
+			if(!$("#header__burger").hasClass('active')) {
+				$('body').removeClass('unscroll');
+			}
 			$(this).parents('.modal').removeClass('active');
 			$(this).parents('.modal__wrap').removeClass('active');
 		});
 
 		$('.modal').on('click', function(){
-			$('body').removeClass('unscroll');
+			if(!$("#header__burger").hasClass('active')) {
+				$('body').removeClass('unscroll');
+			}
 			$(this).removeClass('active');
 			$(this).find('.modal__wrap').removeClass('active');
 		})
@@ -40,14 +49,16 @@ jQuery(function($){
 			e.stopPropagation();
 		});
 
-		$('.appstore_trigger').on('click', function (){
+		$('.appstore_trigger').on('click', function (e){
+			e.preventDefault();
 			$('body').addClass('unscroll');
 			$('.modal').addClass('active');
 			$('#apply-form').addClass('active');
 			$('#apply-form').find("input[value='IOS']").prop("checked", true);
 		});
 
-		$('.playmarket_trigger').on('click', function (){
+		$('.playmarket_trigger').on('click', function (e){
+			e.preventDefault();
 			$('body').addClass('unscroll');
 			$('.modal').addClass('active');
 			$("#apply-form").addClass('active');

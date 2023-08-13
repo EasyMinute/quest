@@ -55,6 +55,9 @@ if( have_rows('content') ):
 
         elseif( get_row_layout() =='under_development' ):
             get_template_part('template-parts/parts/under_development');
+
+        elseif( get_row_layout() =='text_block' ):
+            get_template_part('template-parts/parts/text_block');
         
         endif;
 

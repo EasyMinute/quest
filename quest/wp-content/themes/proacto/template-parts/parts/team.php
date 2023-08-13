@@ -8,9 +8,11 @@
 		<ul class="team__wrap">
 			<?php foreach ($team['members'] as $item): ?>
 				<li>
-					<figure>
-						<img src="<?php echo esc_url($item['image']['url']) ?>" alt="<?php echo esc_attr($item['image']['alt']) ?>">
-					</figure>
+                    <div class="team__photo">
+                        <figure>
+                            <img src="<?php echo esc_url($item['image']['url']) ?>" alt="<?php echo esc_attr($item['image']['alt']) ?>">
+                        </figure>
+                    </div>
 					<h3 class="title-24">
 						<?php echo $item['name'] ?>
 					</h3>

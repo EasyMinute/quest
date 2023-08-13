@@ -54,6 +54,9 @@ if( have_rows('content') ):
 
         elseif( get_row_layout() =='simplest_cta' ):
             get_template_part('template-parts/parts/simplest_cta');
+
+        elseif( get_row_layout() =='text_block' ):
+            get_template_part('template-parts/parts/text_block');
         
         endif;
 
