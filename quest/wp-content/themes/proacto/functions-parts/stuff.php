@@ -58,6 +58,7 @@ function custom_contact_form_submission($contact_form) {
         $endpoint = get_field('api_endpint_url', 'options');
         $response = wp_remote_post($endpoint, $request_args);
         // Optionally, you can check the response for success or handle errors here
+        return false;
 
     }
 }

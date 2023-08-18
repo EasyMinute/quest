@@ -1093,12 +1093,11 @@ input[type="checkbox"]:checked::before{
 	width: fit-content;
 	border: none;
 }
-.wpcf7-not-valid-tip{
-	display: none;
+
+wpcf7-form.failed{
+	display: none !important;
 }
-.wpcf7 form.invalid .wpcf7-response-output, 
-.wpcf7 form.unaccepted .wpcf7-response-output, 
-.wpcf7 form.payment-required .wpcf7-response-output{
+.wpcf7 form.unaccepted .wpcf7-response-output{
 	padding: 16px;
 	border-color: var(--orange);
 	border-radius: 8px;
