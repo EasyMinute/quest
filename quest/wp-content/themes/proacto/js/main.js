@@ -73,3 +73,12 @@ jQuery(function($){
 	});
 
 });
+
+var wpcf7Elm = document.querySelector( '.wpcf7' );
+
+wpcf7Elm.addEventListener( 'wpcf7submit', function( event ) {
+	if (event.detail.status != 'validation_failed'){
+		console.log('sent');
+		alert('Message sent');
+	}
+}, false );
