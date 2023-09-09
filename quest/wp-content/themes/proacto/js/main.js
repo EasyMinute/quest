@@ -70,6 +70,49 @@ jQuery(function($){
 			$(this).parents('.modal__wrap').find('form').trigger('submit');
 		});
 
+		$("#faqSearch").on("input", function () {
+			var searchText = $(this).val().toLowerCase();
+
+			// Loop through each FAQ item
+			$(".accordeons__item").each(function () {
+				var faqText = $(this).find("h3").text();
+				var $faqTitle = $(this).find("h3");
+
+				// Check if the FAQ text contains the search text (case-insensitive)
+				if (faqText.toLowerCase().includes(searchText)) {
+					// Highlight matching words
+					var highlightedText = faqText.replace(new RegExp(searchText, "gi"), function (match) {
+						return '<span class="highlight">' + match + '</span>';
+					});
+
+					// Update the FAQ title with the highlighted text
+					$faqTitle.html(highlightedText);
+
+					$(this).show(); // Display matching items
+				} else {
+					$faqTitle.html(faqText); // Restore original text
+					$(this).hide(); // Hide non-matching items
+				}
+			});
+		});
+
+		$(".baner__scroll").on("click", function () {
+			// Find the next section after the banner
+			var $nextSection = $(this).closest('.baner').next('section');
+
+			// Scroll to the next section smoothly
+			if ($nextSection.length) {
+				$("html, body").animate({
+					scrollTop: $nextSection.offset().top
+				}, 1000);
+			}
+		});
+
+		$(".small_banner__switcher button").on('click', function(){
+			$(".small_banner__switcher button").removeClass('active')
+			$(this).addClass('active')
+		})
+
 	});
 
 });
