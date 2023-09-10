@@ -499,6 +499,11 @@ img{
 	top: 50%;
 	transform: translateY(-50%);
 }
+@media screen and (max-width: 1600px){
+	.baner__socials{
+		left: 24px;
+	}
+}
 .baner__wrap img{
 	max-width: 600px;
 }
@@ -519,6 +524,11 @@ img{
 	background: none;
 	border: none;
 	color: var(--white);
+}
+@media screen and (max-width: 1600px){
+	.baner__scroll{
+		left: 24px;
+	}
 }
 .baner__scroll::after{
 	content: '';
