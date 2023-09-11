@@ -802,11 +802,15 @@ img{
 	position: relative;
 	padding: 100px 120px;
 	overflow: hidden;
+	position: relative;
+	z-index: 1;
 }
 .cta__wrap .title-64{
 	margin-bottom: 40px;
 	max-width: 513px;
 	color: var(--white);
+	position: relative;
+	z-index: 1;
 }
 .cta__wrap .title-64 strong{
 	color: var(--orange);
@@ -815,10 +819,14 @@ img{
 	margin-bottom: 40px;
 	max-width: 513px;
 	color: var(--white);
+	position: relative;
+	z-index: 1;
 }
 .cta__buttons{
 	display: flex;
 	align-items: center;
+	position: relative;
+	z-index: 1;
 }
 .cta__buttons a:first-child{
 	margin-right: 24px;
@@ -837,6 +845,7 @@ img{
 	.cta__wrap{
 		padding: 24px;
 		padding-bottom: 222px;
+		background-size: cover;
 	}
 	.cta__wrap .title-64{
 		font-size: 32px;
@@ -972,7 +981,7 @@ img{
 	overflow: hidden;
 	background-image: url(../img/bg.jpg);
 	background-size: cover;
-	padding: 64px 100px;
+	padding: 64px 100px 48px;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -980,6 +989,7 @@ img{
 }
 .small_cta__wrap .title-56{
 	color: var(--white);
+	margin-bottom: 16px;
 }
 .small_cta__wrap .title-56 strong{
 	color: var(--orange);
@@ -990,6 +1000,7 @@ img{
 }
 .small_cta__buttons button:first-child{
 	margin-right: 24px;
+	border-width: 2px;
 }
 @media screen and (max-width: 920px) {
 	.small_cta{
@@ -1049,8 +1060,15 @@ textarea{
 	font-family: Noto Sans;
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 24px; 
+	line-height: 24px;
+	margin-bottom: 4px;
+}
+.wpcf7-form-control-wrap{
+	display: block;
 	margin-bottom: 24px;
+}
+.wpcf7-not-valid-tip{
+	display: none !important;
 }
 textarea{
 	resize: none;
@@ -1104,7 +1122,7 @@ input[type="checkbox"]:checked::before{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-30%, -50%) rotate(-45deg);
+	transform: translate(-48%, -70%) rotate(-45deg);
 	z-index: 1;
 }
 .contact_block__form .solid-button{
@@ -1136,7 +1154,7 @@ input[type="checkbox"]:checked::before{
 	border-radius: 8px;	
 }
 input.wpcf7-not-valid{
-	border-color: rgb(201, 66, 66);
+	/*border-color: rgb(201, 66, 66);*/
 }
 .contact_block__form .sent-form-text{
 	display: none;
@@ -1635,6 +1653,9 @@ input.wpcf7-not-valid{
 	font-weight: 400;
 	line-height: 130%;
 	margin-bottom: 32px;
+}
+.modal__wrap .wpcf7-submit{
+	display: none !important;
 }
 @media screen and (max-width: 920px){
 	.modal{

@@ -13,7 +13,7 @@ jQuery(function($){
 		});
 
 		$(".accordeons__item").on('click', function(){
-			$(".accordeons__item").removeClass('active');
+			$(".accordeons__item").not($(this)).removeClass('active');
 			$(this).toggleClass('active');
 		});
 
@@ -66,8 +66,8 @@ jQuery(function($){
 		});
 
 		$('.submit-modal').on('click', function(){
-			console.log('a');
-			$(this).parents('.modal__wrap').find('form').trigger('submit');
+
+			$(this).parents('.modal__wrap').find('form').find('.wpcf7-submit').trigger('click');
 		});
 
 		$("#faqSearch").on("input", function () {
@@ -117,11 +117,13 @@ jQuery(function($){
 
 });
 
-var wpcf7Elm = document.querySelector( '.wpcf7' );
+var wpcf7Elm = document.querySelectorAll( '.wpcf7' );
 
-wpcf7Elm.addEventListener( 'wpcf7submit', function( event ) {
-	if (event.detail.status != 'validation_failed'){
-		console.log('sent');
-		alert('Message sent');
-	}
-}, false );
+wpcf7Elm.forEach(element => {
+	element.addEventListener( 'wpcf7submit', function( event ) {
+		if (event.detail.status != 'validation_failed'){
+			console.log('sent');
+			alert('Message sent');
+		}
+	}, false );
+})
