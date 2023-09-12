@@ -41,7 +41,11 @@ $general = get_field('general', 'options') ;
                 </a>
             </div>
 			<?php if ($baner['image']['url']): ?>
-				<img src="<?php echo esc_url($baner['image']['url']) ?>" alt="<?php echo esc_attr($baner['image']['alt']) ?>" class="baner__image">
+                <div class="baner_img_wrap">
+                    <figure class="baner__image">
+                        <img src="<?php echo esc_url($baner['image']['url']) ?>" alt="<?php echo esc_attr($baner['image']['alt']) ?>" >
+                    </figure>
+                </div>
 			<?php endif ?>
 			<?php if ($baner['socials']): ?>
 				<ul class="baner__socials">

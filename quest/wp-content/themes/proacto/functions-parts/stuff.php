@@ -8,7 +8,7 @@ function custom_contact_form_submission($contact_form) {
             $email = sanitize_email($data['email']);
             $name = sanitize_text_field($data['your-name']);
             $message = sanitize_textarea_field($data['message']);
-            $subscribe = isset($data['news']) ? true : false;
+            $subscribe = empty($data['news'][0]) ? false : true;
 
             $content = array(
                 'name' => $name,
@@ -45,7 +45,7 @@ function custom_contact_form_submission($contact_form) {
 
         $request_body = array(
             'email' => $email,
-            'content' => json_encode($content),
+            'content' => json_encode($content, JSON_UNESCAPED_UNICODE),
             'type_of_request' => $type
         );
 
