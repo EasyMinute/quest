@@ -278,7 +278,7 @@ img{
 	opacity: 0.7;
 }
 .main-navigation ul li.current-menu-item a{
-	text-decoration: underline;
+	text-decoration: none;
 	color: var(--orange);
 }
 .main-navigation ul li.orange-button a{
@@ -1077,7 +1077,7 @@ img{
 .contact_block__form{
 	width: 670px;
 	max-width: calc(50% - 24px);
-	margin: auto;
+	margin: 0 auto;
 }
 .contact_block__form * {
 	color: var(--dark-blue);
@@ -1114,7 +1114,7 @@ textarea{
 	font-style: normal;
 	font-weight: 400;
 	line-height: 26px;
-	margin-bottom: 8px;
+	margin-bottom: 0px;
 }
 input[type="checkbox"]{
 	display: inline-block;
