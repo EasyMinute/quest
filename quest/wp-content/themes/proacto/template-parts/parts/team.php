@@ -1,6 +1,6 @@
 <?php $team = get_sub_field('team') ?>
 
-<section class="team">
+<section class="team <?php echo $team['mode'] ?>">
 	<div class="container">
 		<h2 class="title-40">
 			<?php echo $team['title'] ?>

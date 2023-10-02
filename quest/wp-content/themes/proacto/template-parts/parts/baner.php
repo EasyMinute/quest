@@ -3,7 +3,7 @@ $baner = get_sub_field('baner');
 $general = get_field('general', 'options') ;
 ?>
 
-<section class="baner" id="baner">
+<section class="baner <?php echo $baner['mode'] ?>" id="baner">
 	<div class="container">
 		<div class="baner__wrap">
 			<h1 class="title-80"><?php echo $baner['title'] ?></h1>

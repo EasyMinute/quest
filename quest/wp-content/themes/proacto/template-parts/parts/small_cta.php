@@ -1,6 +1,6 @@
 <?php $small_cta = get_sub_field('small_cta'); ?>
 
-<section class="small_cta">
+<section class="small_cta <?php echo $small_cta['mode'] ?>">
 	<div class="container">
 		<div class="small_cta__wrap">
 			<h2 class="title-56">

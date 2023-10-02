@@ -1,6 +1,6 @@
 <?php $contact_block = get_sub_field('contact_block'); ?>
 
-<section class="contact_block" id="contact_block">
+<section class="contact_block <?php echo $contact_block['mode'] ?>" id="contact_block">
 	<div class="container">
 		<h2 class="title-40">
 			<?php echo $contact_block['title'] ?>

@@ -1,6 +1,6 @@
 <?php $simplest_cta = get_sub_field('simplest_cta') ?>
 
-<section class="simplest_cta">
+<section class="simplest_cta <?php echo $simplest_cta['mode'] ?>">
 	<div class="container">
 		<div class="simplest_cta__wrap">
 			<h2 class="title-40">

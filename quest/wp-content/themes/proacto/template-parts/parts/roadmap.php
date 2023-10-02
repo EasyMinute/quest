@@ -1,6 +1,6 @@
 <?php $roadmap = get_sub_field('roadmap') ?>
 
-<section class="roadmap">
+<section class="roadmap <?php echo $roadmap['mode'] ?>">
 	<div class="container">
 		<h2 class="title-40">
 			<?php echo $roadmap['title'] ?>

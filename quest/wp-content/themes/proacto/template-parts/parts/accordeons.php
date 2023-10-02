@@ -1,6 +1,6 @@
 <?php $accordeons = get_sub_field('accordeons'); ?>
 
-<section class="accordeons">
+<section class="accordeons <?php echo $accordeons['mode'] ?>">
 	<div class="container">
 		<ul class="accordeons__wrap">
 			<?php foreach($accordeons['qa'] as $key => $item): ?>

@@ -110,8 +110,27 @@ jQuery(function($){
 
 		$(".small_banner__switcher button").on('click', function(){
 			$(".small_banner__switcher button").removeClass('active')
+			let val = $(this).data('val')
+			$('section').each(function() {
+				if ($(this).hasClass(val) || $(this).hasClass('small_banner')) {
+					$(this).show()
+				} else {
+					$(this).hide()
+				}
+			})
 			$(this).addClass('active')
 		})
+
+		if($('body').hasClass('page-template-page-switch-php')) {
+			let activeMode = $(".small_banner__switcher button.active").data('val');
+			$('section').each(function() {
+				if ($(this).hasClass(activeMode) || $(this).hasClass('small_banner')) {
+					$(this).show()
+				} else {
+					$(this).hide()
+				}
+			})
+		}
 
 	});
 

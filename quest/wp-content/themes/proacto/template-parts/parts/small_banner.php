@@ -19,10 +19,10 @@
             <?php } elseif(is_page_template('page-switch.php')) { ?>
                 <div class="small_banner__switcher_wrap">
                     <div class="small_banner__switcher">
-                        <button class="active">
+                        <button class="active" data-val="player">
                             <span><?php echo __('Player', 'proacto') ?></span>
                         </button>
-                        <button>
+                        <button data-val="creator">
                             <span><?php echo __('Creator', 'proacto') ?></span>
                         </button>
                     </div>

@@ -1,6 +1,6 @@
 <?php $list_with_image = get_sub_field('list_with_image'); ?>
 
-<section class="list_with_image">
+<section class="list_with_image <?php echo $list_with_image['mode'] ?>">
 	<div class="container">
 		<?php if ($list_with_image['title']): ?>
 			<h2 class="title-40">

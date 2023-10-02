@@ -1,7 +1,7 @@
 <?php $image_with_details = get_sub_field('image_with_details') ?>
 <?php $general = get_field('general', 'option') ?>
 
-<section class="image_with_details">
+<section class="image_with_details <?php echo $image_with_details['mode'] ?>">
 	<div class="container">
 		<div class="image_with_details__wrap">
 			<img src="<?php echo esc_url($image_with_details['image']['url']) ?>" alt="<?php echo esc_attr($image_with_details['image']['alt']) ?>" class="image_with_details__col image">

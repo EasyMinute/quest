@@ -3,7 +3,7 @@ $cta = get_sub_field('cta');
 $general = get_field('general', 'options');
 ?>
 
-<section class="cta">
+<section class="cta <?php echo $cta['mode'] ?>">
 	<div class="container">
 		<div class="cta__wrap">
 			<h2 class="title-64">
