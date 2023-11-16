@@ -7,12 +7,10 @@
 				<?php echo $small_cta['title']; ?>
 			</h2>
 			<div class="small_cta__buttons">
-				<button class="apply-trigger border-button white">
-					<?php echo __('Apply for testing', 'proacto') ?>
-				</button>
-				<button class="partner-trigger solid-button white">
+				<button class="partner-trigger border-button white">
 					<?php echo __('Partner with us', 'proacto') ?>
 				</button>
+                <?php get_template_part('template-parts/general/buttons'); ?>
 			</div>
 		</div>
 	</div>

@@ -132,6 +132,56 @@ jQuery(function($){
 			})
 		}
 
+		const swiper = new Swiper('.roadmap__wrap.swiper', {
+			// Optional parameters
+			direction: 'horizontal',
+			slidesPerView: 1,
+			spaceBetween: 16,
+			loop: false,
+
+			// Navigation arrows
+			navigation: {
+				nextEl: '.roadmap-container .swiper-button-next',
+				prevEl: '.roadmap-container .swiper-button-prev',
+			},
+
+			breakpoints: {
+				920: {
+					// If we need pagination
+					pagination: {
+						el: '.roadmap-container .swiper-pagination',
+					},
+					slidesPerView: 3,
+					spaceBetween: 20,
+				}
+			}
+		});
+
+		const teamSwiper = new Swiper('.team__wrap.swiper', {
+			// Optional parameters
+			direction: 'horizontal',
+			slidesPerView: 1,
+			spaceBetween: 16,
+			loop: false,
+
+			// Navigation arrows
+			navigation: {
+				nextEl: '.team-container .swiper-button-next',
+				prevEl: '.team-container .swiper-button-prev',
+			},
+
+			breakpoints: {
+				920: {
+					// If we need pagination
+					pagination: {
+						el: '.team-container .swiper-pagination',
+					},
+					slidesPerView: 4,
+					spaceBetween: 20,
+				}
+			}
+		});
+
 	});
 
 });

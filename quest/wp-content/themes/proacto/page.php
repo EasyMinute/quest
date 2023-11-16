@@ -58,7 +58,12 @@ if( have_rows('content') ):
 
         elseif( get_row_layout() =='text_block' ):
             get_template_part('template-parts/parts/text_block');
-        
+
+        elseif( get_row_layout() =='big_video' ):
+            get_template_part('template-parts/parts/big_video');
+
+        elseif( get_row_layout() =='small_videos' ):
+            get_template_part('template-parts/parts/small_videos');
         endif;
 
     endwhile;

@@ -28,7 +28,7 @@ $general = get_field('general', 'options');
                     </svg>
                     <?php echo __('App Store', 'proacto') ?>
                 </a>
-                <?php $playmarket_link = $general['link_to_play_market'] ? $general['link_to_appstore'] : 'javascript:void(0)'; ?>
+                <?php $playmarket_link = $general['link_to_play_market'] ? $general['link_to_play_market'] : 'javascript:void(0)'; ?>
                 <?php $playmarket_class = $general['link_to_play_market'] ? '' : 'playmarket_trigger'; ?>
                 <a href="<?php echo $playmarket_link ?>" class="icon-button white <?php echo $playmarket_class ?>" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">

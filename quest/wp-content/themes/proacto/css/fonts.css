@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-Thin.ttf') format('truetype');
+    font-weight: 100; /* Adjust the weight accordingly */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-ThinItalic.ttf') format('truetype');
+    font-weight: 100; /* Adjust the weight accordingly */
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-Light.ttf') format('truetype');
+    font-weight: 300; /* Adjust the weight accordingly */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-Black.ttf') format('truetype');
+    font-weight: 300; /* Adjust the weight accordingly */
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-Regular.ttf') format('truetype');
+    font-weight: 400; /* Adjust the weight accordingly */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-Italic.ttf') format('truetype');
+    font-weight: 400; /* Adjust the weight accordingly */
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-Medium.ttf') format('truetype');
+    font-weight: 500; /* Adjust the weight accordingly */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-MediumItalic.ttf') format('truetype');
+    font-weight: 500; /* Adjust the weight accordingly */
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* Adjust the weight accordingly */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600; /* Adjust the weight accordingly */
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-Bold.ttf') format('truetype');
+    font-weight: 700; /* Adjust the weight accordingly */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-BoldItalic.ttf') format('truetype');
+    font-weight: 700; /* Adjust the weight accordingly */
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-Black.ttf') format('truetype');
+    font-weight: 900; /* Adjust the weight accordingly */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Daikon';
+    src: url('../fonts/daikon/Daikon-BlackItalic.ttf') format('truetype');
+    font-weight: 900; /* Adjust the weight accordingly */
+    font-style: italic;
+}
+
+
+/*NOTO SANS*/
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/notosans/NotoSans-Regular.ttf') format('truetype');
+    font-weight: 400; /* Adjust the weight accordingly */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/notosans/NotoSans-Italic.ttf') format('truetype');
+    font-weight: 400; /* Adjust the weight accordingly */
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/notosans/NotoSans-Medium.ttf') format('truetype');
+    font-weight: 500; /* Adjust the weight accordingly */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/notosans/NotoSans-MediumItalic.ttf') format('truetype');
+    font-weight: 500; /* Adjust the weight accordingly */
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/notosans/NotoSans-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* Adjust the weight accordingly */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/notosans/NotoSans-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600; /* Adjust the weight accordingly */
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/notosans/NotoSans-Black.ttf') format('truetype');
+    font-weight: 900; /* Adjust the weight accordingly */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/notosans/NotoSans-BlackItalic.ttf') format('truetype');
+    font-weight: 900; /* Adjust the weight accordingly */
+    font-style: italic;
+}
